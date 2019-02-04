@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<style>
+body{background-color: grey;}
+
+  .a{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation-name: s;
+    animation-duration: 10s;
+      animation-iteration-count: infinite;
+  }
+  .b{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation-name: r;
+    animation-duration: 10s;
+      animation-iteration-count: infinite;
+  }
+
+
+@keyframes s {
+    0%   {background-color: red; left:0px; top:0px; width: 1000px; height: 500px; }
+    25%  {background-color: red; left:0px; top:0px;width: 1000px;height: 500px;}
+    50%  {background-color: red; left:0px; top:0px;width: 1px;height: 1px;}
+    75%  {background-color: red; left:1500px; top:500px;width: 100px;height: 150px; }
+    100% {background-color: red; left:0px; top:0px;width: 1000px;height: 500px;}
+  }
+
+
+  @keyframes r {
+      0%   {background-color: blue; left:0px; top:0px; width: 1px;height: 1px;}
+      25%   {background-color: blue; left:1500px; top:500px; width: 100px;height: 150px;}
+      50%  {background-color: blue; left:0px; top:0px; width: 1000px;height: 500px;}
+      75%  {background-color: blue; left:0px; top:0px; width: 1000px;height: 500px;}
+      100% {background-color: blue; left:0px; top:0px; width: 1px;height: 1px;}
+    }
+
+
+
+</style>
+
+  </head>
+  <body>
+
+    <div class="a">
+    </div>
+    <br>
+    <div class="b">
+    </div>
+
+
+  </body>
+</html>
