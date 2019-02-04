@@ -1,0 +1,21 @@
+body{
+  background: gray;
+}
+.kopf{
+  background: red;
+}
+.kopf .Kotakt{
+  background: yellow;
+}
+.koerper{
+  background:green;
+}
+.koerper .formular{
+  background: tomato;
+}
+.koerper .info{
+  background: gold;
+}
+.fuesse{
+  background: blue;
+}
