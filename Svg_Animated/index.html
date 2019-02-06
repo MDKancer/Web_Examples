@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <title></title>
+  </head>
+  <body>
+    <svg>
+      <polygon points="15,0 45,0 60,20 45,40 15,40 0,20" style="fill:#fdb822;stroke:#684f40;stroke-width:2" >
+        <animate id="startAnimation"attributeName="points" dur="1s" fill="freeze"
+        begin="click"
+              from="15,0 45,0 60,20 45,40 15,40 0,20";
+              to="15,0 85,0 85,20 85,40 15,40 0,20"/>
+              <animate attributeName="points" dur="1s" fill="freeze"
+              begin="startAnimation.end"
+                    from="15,0 85,0 85,20 85,40 15,40 0,20";
+                    to="15,0 45,0 60,20 45,40 15,40 0,20"/>
+      </polygon>
+
+    </svg>
+  </body>
+</html>
