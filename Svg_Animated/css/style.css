@@ -2,6 +2,7 @@
 body{
   margin: 0;
   padding: 0;
+  background-color: gray;
 }
 nav{
   position: absolute;
@@ -31,13 +32,33 @@ nav ul li svg polygon{
   position: relative;
   left:100px;
 }
-nav ul li svg text{
+nav ul li svg .title{
   opacity: 0;
-  transition: all 0.2s;
-  transition-delay: 0.7s;
+  text-align: center;
   pointer-events: none;
 }
-nav ul li svg polygon:hover + text{
+nav ul li .symbol{
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  left: 120px;
+  top: 0px;
+  pointer-events: none;
+  transition: all 1s;
+}
+nav ul li svg:hover + .symbol{
+  transition-duration: 1.9s;
+  transform: translateX(-100px);
+  fill:white;
+}
+nav ul li svg polygon:hover + .title{
+  transition: opacity 2.5s, color 1s;
+  transition-delay: 0.2s;
   opacity: 1;
   fill:white;
+}
+nav ul li svg polygon:not(:hover) + .title{
+  transition: opacity 0.3s, color 1s;
+  opacity: 0;
+  fill:black;
 }
