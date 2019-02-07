@@ -26,16 +26,10 @@ nav ul li svg{
   position: relative;
   width: 200px;
   top: 40px;
-
 }
 nav ul li svg polygon{
   position: relative;
   left:100px;
-}
-nav ul li svg .title{
-  opacity: 0;
-  text-align: center;
-  pointer-events: none;
 }
 nav ul li .symbol{
   position: absolute;
@@ -46,11 +40,12 @@ nav ul li .symbol{
   pointer-events: none;
   transition: all 1s;
 }
-nav ul li svg:hover + .symbol{
-  transition-duration: 1.9s;
-  transform: translateX(-100px);
-  fill:white;
+nav ul li svg .title{
+  opacity: 0;
+  text-align: center;
+  pointer-events: none;
 }
+
 nav ul li svg polygon:hover + .title{
   transition: opacity 2.5s, color 1s;
   transition-delay: 0.2s;
@@ -61,4 +56,9 @@ nav ul li svg polygon:not(:hover) + .title{
   transition: opacity 0.3s, color 1s;
   opacity: 0;
   fill:black;
+}
+nav ul li svg polygon:hover ~ .symbol{
+  transition-duration: 1.9s;
+  transform: translateX(-100px);
+  fill:white;
 }
